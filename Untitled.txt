@@ -1,0 +1,6 @@
+
+Unresolved library: ..//pageObjects/LoginPage.py. Error generating libspec: Initializing library 'LoginPage' with no arguments failed: NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+
+
+Unresolved library: ../pageObjects/PYTHON_FILE.py. Error generating libspec: Importing library 'PYTHON_FILE' failed: NoSuchDriverException: Message: Unable to obtain driver for firefox using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location Consider adding the needed paths to the "robot.pythonpath" setting and calling the "Robot Framework: Clear caches and restart" action.

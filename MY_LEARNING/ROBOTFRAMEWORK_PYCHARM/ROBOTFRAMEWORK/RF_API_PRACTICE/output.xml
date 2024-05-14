@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-22T10:02:07.173300" rpa="false" schemaversion="5">
+<suite id="s1" name="FirstRF" source="D:\LEARNING\MY_LEARNING\ROBOTFRAMEWORK_PYCHARM\ROBOTFRAMEWORK\RF_API_PRACTICE\FirstRF.robot">
+<test id="s1-t1" name="Successful Login" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-22T10:02:07.386588" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg time="2024-01-22T10:02:07.411908" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-01-22T10:02:07.411908" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-01-22T10:02:07.386588" elapsed="0.028315">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<status status="FAIL" start="2024-01-22T10:02:07.384594" elapsed="0.031342">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2024-01-22T10:02:07.174298" elapsed="0.242637"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="FirstRF">FirstRF</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

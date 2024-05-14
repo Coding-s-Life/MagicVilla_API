@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-20T18:58:14.177944" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotfile" source="D:\LEARNING\MY_LEARNING\RobotFramework\RobotFramework__Practice_Tests\robotfile.robot">
+<test id="s1-t1" name="My Test" line="11">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-01-20T18:58:14.393687" level="INFO">Hello, world!</msg>
+<arg>${MESSAGE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-01-20T18:58:14.392690" elapsed="0.000997"/>
+</kw>
+<kw name="My Keyword">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-01-20T18:58:14.393687" level="INFO" html="true">Directory '&lt;a href="file://D:\LEARNING\MY_LEARNING\RobotFramework\RobotFramework__Practice_Tests"&gt;D:\LEARNING\MY_LEARNING\RobotFramework\RobotFramework__Practice_Tests&lt;/a&gt;' exists.</msg>
+<arg>${path}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-01-20T18:58:14.393687" elapsed="0.000998"/>
+</kw>
+<arg>D:\\LEARNING\\MY_LEARNING\\RobotFramework\\RobotFramework__Practice_Tests</arg>
+<status status="PASS" start="2024-01-20T18:58:14.393687" elapsed="0.000998"/>
+</kw>
+<doc>Example test.</doc>
+<status status="PASS" start="2024-01-20T18:58:14.391692" elapsed="0.002993"/>
+</test>
+<test id="s1-t2" name="Another Test" line="15">
+<kw name="Should Be Equal ${MESSAGE} Hello, world!">
+<msg time="2024-01-20T18:58:14.396679" level="FAIL">No keyword with name 'Should Be Equal ${MESSAGE} Hello, world!' found. Did you try using keyword 'BuiltIn.Should Be Equal' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-01-20T18:58:14.396679" elapsed="0.000000">No keyword with name 'Should Be Equal ${MESSAGE} Hello, world!' found. Did you try using keyword 'BuiltIn.Should Be Equal' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<status status="FAIL" start="2024-01-20T18:58:14.394685" elapsed="0.001994">No keyword with name 'Should Be Equal ${MESSAGE} Hello, world!' found. Did you try using keyword 'BuiltIn.Should Be Equal' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<doc>Example using the space separated format.</doc>
+<status status="FAIL" start="2024-01-20T18:58:14.179939" elapsed="0.216740"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Robotfile">Robotfile</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-20T18:58:14.180954" level="ERROR">Error in file 'D:\LEARNING\MY_LEARNING\RobotFramework\RobotFramework__Practice_Tests\robotfile.robot' on line 9: Setting variable 'D:\\LEARNING\\MY_LEARNING\\RobotFramework\\RobotFramework__Practice_Tests' failed: Invalid variable name 'D:\\LEARNING\\MY_LEARNING\\RobotFramework\\RobotFramework__Practice_Tests='.</msg>
+</errors>
+</robot>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-21T13:01:23.557431" rpa="false" schemaversion="5">
+<suite id="s1" name="KeepChromeOpenedForLongTime" source="D:\LEARNING\MY_LEARNING\PycharmProjects\TELEMETRY\PRACTICE_TESTS\KeepChromeOpenedForLongTime.robot">
+<test id="s1-t1" name="Practice Long_Time_Chrome_Opened" line="21">
+<kw name="Practicising Long_Time_Chrome_Opened">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-21T13:01:23.737460" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/request-demo/'.</msg>
+<msg time="2024-01-21T13:01:24.706861" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-01-21T13:01:24.706861" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${URL}</arg>
+<arg>${Web_Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-01-21T13:01:23.737460" elapsed="0.972965">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-01-21T13:01:24.710425" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>60000s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-01-21T13:01:24.710425" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-01-21T13:01:23.737460" elapsed="0.973913">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<status status="FAIL" start="2024-01-21T13:01:23.736463" elapsed="0.974910">NoSuchDriverException: Message: Unable to obtain driver for chrome using Selenium Manager.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2024-01-21T13:01:23.558428" elapsed="1.153942"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="KeepChromeOpenedForLongTime">KeepChromeOpenedForLongTime</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

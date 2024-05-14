@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-20T06:25:54.337248" rpa="false" schemaversion="5">
+<suite id="s1" name="QuickStart" source="D:\LEARNING\QuickStartGuide-master\QuickStart.rst">
+<kw name="Clear login database" type="SETUP">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:54.370712" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:54.370712" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.369714" elapsed="0.000998"/>
+</kw>
+<test id="s1-t1" name="User can create an account and log in" line="2">
+<kw name="Create valid user">
+<kw name="Create User" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.371709" elapsed="0.048890"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>SUCCESS</arg>
+<status status="PASS" start="2024-01-20T06:25:54.420599" elapsed="0.000000"/>
+</kw>
+<arg>fred</arg>
+<arg>P4ssw0rd</arg>
+<status status="PASS" start="2024-01-20T06:25:54.371709" elapsed="0.048890"/>
+</kw>
+<kw name="Attempt To Login With Credentials" owner="LoginLibrary">
+<arg>fred</arg>
+<arg>P4ssw0rd</arg>
+<status status="PASS" start="2024-01-20T06:25:54.420599" elapsed="0.052042"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Logged In</arg>
+<status status="PASS" start="2024-01-20T06:25:54.473162" elapsed="0.000000"/>
+</kw>
+<kw name="Clear login database" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:54.474197" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:54.474197" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.473162" elapsed="0.001035"/>
+</kw>
+<tag>example</tag>
+<tag>quickstart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-01-20T06:25:54.370712" elapsed="0.103485"/>
+</test>
+<test id="s1-t2" name="User cannot log in with bad password" line="7">
+<kw name="Create valid user">
+<kw name="Create User" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.476157" elapsed="0.048826"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>SUCCESS</arg>
+<status status="PASS" start="2024-01-20T06:25:54.524983" elapsed="0.000000"/>
+</kw>
+<arg>betty</arg>
+<arg>P4ssw0rd</arg>
+<status status="PASS" start="2024-01-20T06:25:54.475160" elapsed="0.049823"/>
+</kw>
+<kw name="Attempt To Login With Credentials" owner="LoginLibrary">
+<arg>betty</arg>
+<arg>wrong</arg>
+<status status="PASS" start="2024-01-20T06:25:54.524983" elapsed="0.051827"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Access Denied</arg>
+<status status="PASS" start="2024-01-20T06:25:54.577807" elapsed="0.000000"/>
+</kw>
+<kw name="Clear login database" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:54.577807" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:54.577807" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.577807" elapsed="0.000000"/>
+</kw>
+<tag>example</tag>
+<tag>quickstart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-01-20T06:25:54.475160" elapsed="0.103693"/>
+</test>
+<test id="s1-t3" name="User can change password" line="12">
+<kw name="Given a user has a valid account">
+<kw name="Create valid user">
+<kw name="Create User" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.579836" elapsed="0.048070"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>SUCCESS</arg>
+<status status="PASS" start="2024-01-20T06:25:54.627906" elapsed="0.000000"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.579836" elapsed="0.048070"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.579836" elapsed="0.048070"/>
+</kw>
+<kw name="When she changes her password">
+<kw name="Change Password" owner="LoginLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<arg>${NEW PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.628870" elapsed="0.052447"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>SUCCESS</arg>
+<status status="PASS" start="2024-01-20T06:25:54.681317" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.628870" elapsed="0.052447"/>
+</kw>
+<kw name="Then she can log in with the new password">
+<kw name="Login">
+<kw name="Attempt To Login With Credentials" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.682312" elapsed="0.050965"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Logged In</arg>
+<status status="PASS" start="2024-01-20T06:25:54.733277" elapsed="0.001033"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${NEW PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.682312" elapsed="0.051998"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.682312" elapsed="0.051998"/>
+</kw>
+<kw name="And she cannot use the old password anymore">
+<kw name="Attempt To Login With Credentials" owner="LoginLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.734310" elapsed="0.051633"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Access Denied</arg>
+<status status="PASS" start="2024-01-20T06:25:54.785943" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.734310" elapsed="0.051633"/>
+</kw>
+<kw name="Clear login database" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:54.786635" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:54.786635" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:54.786635" elapsed="0.000000"/>
+</kw>
+<tag>example</tag>
+<tag>quickstart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-01-20T06:25:54.578853" elapsed="0.207782"/>
+</test>
+<test id="s1-t4" name="Invalid password" line="18">
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.787635" elapsed="0.048427"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.836062" elapsed="0.000000"/>
+</kw>
+<arg>abCD5</arg>
+<arg>${PWD INVALID LENGTH}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.787635" elapsed="0.048427"/>
+</kw>
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.836973" elapsed="0.047453"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.884426" elapsed="0.000000"/>
+</kw>
+<arg>abCD567890123</arg>
+<arg>${PWD INVALID LENGTH}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.836973" elapsed="0.048961"/>
+</kw>
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.885934" elapsed="0.050300"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.936234" elapsed="0.000000"/>
+</kw>
+<arg>123DEFG</arg>
+<arg>${PWD INVALID CONTENT}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.885934" elapsed="0.050300"/>
+</kw>
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.936734" elapsed="0.047502"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.984236" elapsed="0.000000"/>
+</kw>
+<arg>abcd56789</arg>
+<arg>${PWD INVALID CONTENT}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.936734" elapsed="0.047502"/>
+</kw>
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.985238" elapsed="0.048994"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.034232" elapsed="0.000000"/>
+</kw>
+<arg>AbCdEfGh</arg>
+<arg>${PWD INVALID CONTENT}</arg>
+<status status="PASS" start="2024-01-20T06:25:54.985238" elapsed="0.048994"/>
+</kw>
+<kw name="Creating user with invalid password should fail">
+<kw name="Create User" owner="LoginLibrary">
+<arg>example</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.035046" elapsed="0.048301"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Creating user failed: ${error}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.083347" elapsed="0.000000"/>
+</kw>
+<arg>abCD56+</arg>
+<arg>${PWD INVALID CONTENT}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.035046" elapsed="0.048301"/>
+</kw>
+<kw name="Clear login database" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:55.084310" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.084310" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:55.084310" elapsed="0.000000"/>
+</kw>
+<tag>example</tag>
+<tag>quickstart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2024-01-20T06:25:54.787635" elapsed="0.296675"/>
+</test>
+<test id="s1-t5" name="User status is stored in database" line="72">
+<kw name="Create valid user">
+<kw name="Create User" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.085344" elapsed="0.045840"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>SUCCESS</arg>
+<status status="PASS" start="2024-01-20T06:25:55.131184" elapsed="0.000000"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.085344" elapsed="0.045840"/>
+</kw>
+<kw name="Database Should Contain">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:55.132182" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<msg time="2024-01-20T06:25:55.133179" level="INFO">${database} = janedoe	J4n3D0e	Inactive
+</msg>
+<var>${database}</var>
+<arg>${DATABASE FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.132182" elapsed="0.000997"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${database}</arg>
+<arg>${username}\t${password}\t${status}\n</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.133179" elapsed="0.000000"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<arg>Inactive</arg>
+<status status="PASS" start="2024-01-20T06:25:55.132182" elapsed="0.000997"/>
+</kw>
+<kw name="Login">
+<kw name="Attempt To Login With Credentials" owner="LoginLibrary">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.134176" elapsed="0.046367"/>
+</kw>
+<kw name="Status Should Be" owner="LoginLibrary">
+<arg>Logged In</arg>
+<status status="PASS" start="2024-01-20T06:25:55.180543" elapsed="0.000000"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-01-20T06:25:55.133179" elapsed="0.047364"/>
+</kw>
+<kw name="Database Should Contain">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:55.181505" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<msg time="2024-01-20T06:25:55.184496" level="INFO">${database} = janedoe	J4n3D0e	Active
+</msg>
+<var>${database}</var>
+<arg>${DATABASE FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.181505" elapsed="0.002991"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${database}</arg>
+<arg>${username}\t${password}\t${status}\n</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.185528" elapsed="0.000000"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<arg>Active</arg>
+<status status="PASS" start="2024-01-20T06:25:55.180543" elapsed="0.004985"/>
+</kw>
+<kw name="Clear login database" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-01-20T06:25:55.186526" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt"&gt;C:\Users\munee\AppData\Local\Temp\robotframework-quickstart-db.txt&lt;/a&gt;'.</msg>
+<arg>${DATABASE FILE}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-01-20T06:25:55.185528" elapsed="0.000998"/>
+</kw>
+<status status="PASS" start="2024-01-20T06:25:55.185528" elapsed="0.000998"/>
+</kw>
+<tag>database</tag>
+<tag>quickstart</tag>
+<tag>variables</tag>
+<status status="PASS" start="2024-01-20T06:25:55.085344" elapsed="0.101182"/>
+</test>
+<status status="PASS" start="2024-01-20T06:25:54.340278" elapsed="0.847243"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">database</stat>
+<stat pass="4" fail="0" skip="0">example</stat>
+<stat pass="5" fail="0" skip="0">quickstart</stat>
+<stat pass="4" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">variables</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="QuickStart">QuickStart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
